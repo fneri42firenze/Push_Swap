@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 19:00:59 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/16 20:58:33 by fneri            ###   ########.fr       */
+/*   Updated: 2024/01/17 17:05:32 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	main(int *argc, char **argv)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	t_list	*stack_a;
+	t_list	*stack_b;
 
 	stack_a = NULL;
 	stack_b = NULL;
