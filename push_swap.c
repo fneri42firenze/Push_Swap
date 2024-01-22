@@ -6,13 +6,22 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 16:23:03 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/21 20:30:16 by fneri            ###   ########.fr       */
+/*   Updated: 2024/01/22 20:25:35 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_parsing(char argv)
+bool	ft_parsing(char argv)
 {
-	if
+	while (!argv)
+	{
+		if (argv <= INT_MIN && argv >= INT_MAX)
+			return (0);
+		else if ((argv == '-' || argv == '+')
+			&& (argv++ == '-' || argv++ == '+'))
+			return (0);
+		argv++;
+	}
+	return (1);
 }
