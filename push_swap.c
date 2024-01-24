@@ -6,15 +6,15 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 16:23:03 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/22 20:25:35 by fneri            ###   ########.fr       */
+/*   Updated: 2024/01/24 16:11:33 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool	ft_parsing(char argv)
+bool	ft_parsing(char **argv)
 {
-	while (!argv)
+	while (*argv)
 	{
 		if (argv <= INT_MIN && argv >= INT_MAX)
 			return (0);

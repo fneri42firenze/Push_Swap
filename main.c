@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 19:00:59 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/22 19:59:17 by fneri            ###   ########.fr       */
+/*   Updated: 2024/01/24 16:14:28 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	main(int *argc, char **argv)
 		return (1);
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
+	ft_atoi(*argv);
 	if (!ft_parsing(argv))
 		stack_a = ft_create_stack(argv);
 	stack_b = NULL;
