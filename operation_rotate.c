@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   operation_rotate.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
+/*   By: filippomartinoneri <filippomartinoneri@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 20:50:52 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/16 20:52:35 by fneri            ###   ########.fr       */
+/*   Updated: 2024/01/26 11:58:19 by filippomart      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_ra(t_list **stack_a)
+void	ft_ra(t_lista **stack_a)
 {
-	t_list	*last;
-	t_list	*first;
+	t_lista	*last;
+	t_lista	*first;
 
 	if (*stack_a == NULL || (*stack_a)->next == NULL)
 		return ;
@@ -30,10 +30,10 @@ void	ft_ra(t_list **stack_a)
 	return ;
 }
 
-void	ft_rb(t_list **stack_b)
+void	ft_rb(t_lista **stack_b)
 {
-	t_list	*last;
-	t_list	*first;
+	t_lista	*last;
+	t_lista	*first;
 
 	if (*stack_b == NULL || (*stack_b)->next == NULL)
 		return ;

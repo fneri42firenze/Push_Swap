@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   operation_reverse_rotate.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
+/*   By: filippomartinoneri <filippomartinoneri@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 20:50:46 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/16 20:52:50 by fneri            ###   ########.fr       */
+/*   Updated: 2024/01/26 11:58:30 by filippomart      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_rra(t_list **stack_a)
+void	ft_rra(t_lista **stack_a)
 {
-	t_list	*last;
-	t_list	*tmp;
+	t_lista	*last;
+	t_lista	*tmp;
 
 	last = *stack_a;
 	tmp = *stack_a;
@@ -30,10 +30,10 @@ void	ft_rra(t_list **stack_a)
 	write(1, "rra\n", 4);
 }
 
-void	ft_rrb(t_list **stack_b)
+void	ft_rrb(t_lista **stack_b)
 {
-	t_list	*last;
-	t_list	*tmp;
+	t_lista	*last;
+	t_lista	*tmp;
 
 	last = *stack_b;
 	tmp = *stack_b;

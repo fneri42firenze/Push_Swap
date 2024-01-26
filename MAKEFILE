@@ -3,52 +3,49 @@
 #                                                         :::      ::::::::    #
 #    MAKEFILE                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fneri <fneri@student.42.fr>                +#+  +:+       +#+         #
+#    By: filippomartinoneri <filippomartinoneri@    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/24 16:39:12 by fneri             #+#    #+#              #
-#    Updated: 2024/01/24 16:43:54 by fneri            ###   ########.fr        #
+#    Updated: 2024/01/26 11:49:19 by filippomart      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
-
+NAME = push_swap
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
-CFLAGS = -Wall -Wextra -Werror
-
-NAME = push_swap
-
-SRC = main.c /
-	push_swap.c /
-	operation_push.c /
-	operation_reverse_rotate.c /
-	operation_rotate.c /
+SRCS = mainfile.c \
+	push_swap.c \
+	operation_push.c \
+	operation_reverse_rotate.c \
+	operation_rotate.c \
 	operation_swap.c
 				
+OBJS = $(SRCS:.c=.o)
 
-LIBFT =	libft/libft.a
-
-OBJ = $(SRC:.c=.o)
-
-
-$(NAME): $(OBJ)
-	make -C ./libft
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT)
+LIBFT =	../libft_extended/libft.a
+PRINTF = ../ft_printf/libftprintf.a
 
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT) $(PRINTF)
+
+$(OBJS): $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
+
 clean:
-	make clean -C libft
-	${RM} $(OBJ) $(OBJ_BONUS)
+	$(MAKE) clean -C libft_extended
+	$(MAKE) clean -C ft_printf
+	$(RM) $(OBJS)
 
-fclean:	clean
-	make fclean -C libft
-	${RM} $(NAME) $(NAME_BONUS) ${OBJ} $(OBJ_BONUS)
+fclean: clean
+	$(MAKE) fclean -C libft_extended
+	$(MAKE) fclean -C ft_printf
+	$(RM) $(NAME)
 
-re:	fclean bonus
-
-bonus:	all $(OBJ_BONUS)
-	$(CC) $(CFLAGS) -o $(NAME_BONUS) $(OBJ_BONUS) $(LIBFT)
+re: fclean all
 
 
 .PHONY:	all clean fclean re

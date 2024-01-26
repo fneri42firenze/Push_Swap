@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   operation_push.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
+/*   By: filippomartinoneri <filippomartinoneri@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 20:50:50 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/21 16:11:38 by fneri            ###   ########.fr       */
+/*   Updated: 2024/01/26 11:58:40 by filippomart      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_pa(t_list **stack_b, t_list **stack_a)
+void	ft_pa(t_lista **stack_b, t_list **stack_a)
 {
-	t_list	*tmp;
+	t_lista	*tmp;
 
 	if (*stack_b == NULL)
 		return ;
@@ -26,9 +26,9 @@ void	ft_pa(t_list **stack_b, t_list **stack_a)
 	return ;
 }
 
-void	ft_pb(t_list **stack_a, t_list **stack_b)
+void	ft_pb(t_lista **stack_a, t_list **stack_b)
 {
-	t_list	*tmp;
+	t_lista	*tmp;
 
 	if (*stack_a == NULL)
 		return ;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
+/*   By: filippomartinoneri <filippomartinoneri@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 18:52:00 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/17 18:01:57 by fneri            ###   ########.fr       */
+/*   Updated: 2024/01/26 11:57:27 by filippomart      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@
 
 # include <stdbool.h>
 # include <limits.h>
-# include <../libft_extended/libft.h>
-# include <../ft_printf/ft_printf.h>
+# include "libft_extended/libft.h"
+# include "ft_printf/ft_printf.h"
 
-typedef struct s_list
+typedef struct s_lista
 {
 	int				value;
 	struct s_list	*next;
-}		t_list;
+}		t_lista;
 
-int			main(int *argc, char **argv);
 t_list		*ft_new_node(int value);
 t_list		*ft_create_stack(char **values);
 

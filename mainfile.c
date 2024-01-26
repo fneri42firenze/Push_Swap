@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   mainfile.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
+/*   By: filippomartinoneri <filippomartinoneri@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 19:00:59 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/24 16:14:28 by fneri            ###   ########.fr       */
+/*   Updated: 2024/01/26 11:58:47 by filippomart      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int *argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
+	t_lista	*stack_a;
+	t_lista	*stack_b;
 
 	if (argc == 1 || (argc == 2 && !argv[2][0]))
 		return (1);
