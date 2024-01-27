@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   operation_swap.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: filippomartinoneri <filippomartinoneri@    +#+  +:+       +#+        */
+/*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 19:15:01 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/26 11:58:05 by filippomart      ###   ########.fr       */
+/*   Updated: 2024/01/27 19:43:36 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sa(t_lista **stack_a)
+void	ft_sa(t_stack **stack_a)
 {
-	t_lista	*tmp;
-	t_lista	*tmp2;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 
 	tmp = *stack_a;
 	tmp2 = tmp->next;
@@ -26,10 +26,10 @@ void	ft_sa(t_lista **stack_a)
 	return ;
 }
 
-void	ft_sb(t_lista **stack_b)
+void	ft_sb(t_stack **stack_b)
 {
-	t_lista	*tmp;
-	t_lista	*tmp2;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 
 	tmp = *stack_b;
 	tmp2 = tmp->next;
@@ -40,10 +40,10 @@ void	ft_sb(t_lista **stack_b)
 	return ;
 }
 
-void	ft_ss(t_lista **stack_a, t_list **stack_b)
+void	ft_ss(t_stack **stack_a, t_stack **stack_b)
 {
-	t_lista	*tmp;
-	t_lista	*tmp2;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 
 	tmp = *stack_a;
 	tmp2 = tmp->next;

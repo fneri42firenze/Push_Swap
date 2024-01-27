@@ -1,18 +1,18 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    MAKEFILE                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: filippomartinoneri <filippomartinoneri@    +#+  +:+       +#+         #
+#    By: fneri <fneri@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/24 16:39:12 by fneri             #+#    #+#              #
-#    Updated: 2024/01/26 11:49:19 by filippomart      ###   ########.fr        #
+#    Updated: 2024/01/27 20:44:14 by fneri            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -f
 
 SRCS = mainfile.c \
@@ -20,22 +20,30 @@ SRCS = mainfile.c \
 	operation_push.c \
 	operation_reverse_rotate.c \
 	operation_rotate.c \
-	operation_swap.c
+	operation_swap.c \
+	list_function.c 
 				
 OBJS = $(SRCS:.c=.o)
 
-LIBFT =	../libft_extended/libft.a
-PRINTF = ../ft_printf/libftprintf.a
+LIBFT =	libft_extended/libft.a
+PRINTF = ft_printf/libftprintf.a
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(LIBFT) $(PRINTF)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT) $(PRINTF)
 
 $(OBJS): $(SRCS)
 	$(CC) $(CFLAGS) -c $(SRCS)
 
-clean:
+
+$(LIBFT):
+	$(MAKE) -C libft_extended
+
+$(PRINTF):
+	$(MAKE) -C ft_printf
+
+clean:	
 	$(MAKE) clean -C libft_extended
 	$(MAKE) clean -C ft_printf
 	$(RM) $(OBJS)

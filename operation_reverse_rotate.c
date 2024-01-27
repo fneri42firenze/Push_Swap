@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   operation_reverse_rotate.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: filippomartinoneri <filippomartinoneri@    +#+  +:+       +#+        */
+/*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 20:50:46 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/26 11:58:30 by filippomart      ###   ########.fr       */
+/*   Updated: 2024/01/27 19:43:31 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_rra(t_lista **stack_a)
+void	ft_rra(t_stack **stack_a)
 {
-	t_lista	*last;
-	t_lista	*tmp;
+	t_stack	*last;
+	t_stack	*tmp;
 
 	last = *stack_a;
 	tmp = *stack_a;
@@ -30,10 +30,10 @@ void	ft_rra(t_lista **stack_a)
 	write(1, "rra\n", 4);
 }
 
-void	ft_rrb(t_lista **stack_b)
+void	ft_rrb(t_stack **stack_b)
 {
-	t_lista	*last;
-	t_lista	*tmp;
+	t_stack	*last;
+	t_stack	*tmp;
 
 	last = *stack_b;
 	tmp = *stack_b;
@@ -48,10 +48,10 @@ void	ft_rrb(t_lista **stack_b)
 	write(1, "rrb\n", 4);
 }
 
-void	ft_rrr(t_list **stack_a, t_list **stack_b)
+void	ft_rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	t_list	*last;
-	t_list	*tmp;
+	t_stack	*last;
+	t_stack	*tmp;
 
 	last = *stack_a;
 	tmp = *stack_a;
