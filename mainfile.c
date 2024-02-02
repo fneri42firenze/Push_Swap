@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mainfile.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
+/*   By: filippomartinoneri <filippomartinoneri@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 19:00:59 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/27 21:35:59 by fneri            ###   ########.fr       */
+/*   Updated: 2024/02/02 10:21:56 by filippomart      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,9 @@ int	main(int argc, char **argv)
 	if (ft_parsing(argv))
 		stack_a = ft_create_stack(argv);
 	stack_b = NULL;
-	return (0);
+	if (stack_a != NULL)
+
+		if (stack_b == NULL)
+
+			return (0);
 }
