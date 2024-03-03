@@ -6,7 +6,7 @@
 #    By: fneri <fneri@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/24 16:39:12 by fneri             #+#    #+#              #
-#    Updated: 2024/03/03 14:51:50 by fneri            ###   ########.fr        #
+#    Updated: 2024/03/03 15:30:17 by fneri            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ SRCS = push_swap.c \
 	operation_swap.c \
 	list_function.c \
 	parsing.c \
+	lis1.c \
+	lis2.c \
 				
 OBJS = $(SRCS:.c=.o)
 

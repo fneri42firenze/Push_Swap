@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 17:55:42 by fneri             #+#    #+#             */
-/*   Updated: 2024/02/06 13:02:39 by fneri            ###   ########.fr       */
+/*   Updated: 2024/03/03 15:40:29 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_print_stack(t_stack *stack)
 {
 	while (stack)
 	{
-		printf("%d\n", stack->value);
+		ft_printf("%d\n", stack->value);
 		stack = stack->next;
 	}
 }

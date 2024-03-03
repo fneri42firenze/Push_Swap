@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 19:00:59 by fneri             #+#    #+#             */
-/*   Updated: 2024/03/03 15:07:41 by fneri            ###   ########.fr       */
+/*   Updated: 2024/03/03 15:54:47 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		if (ft_parsing(argv) && ft_check_double(argv) && ft_max_int(argv))
-			stack_a = ft_create_stack(argv);
+			stack_a = ft_create_srtack(argv);
 		else
 		{
 			write(1, "Error\n", 6);
