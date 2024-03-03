@@ -6,7 +6,7 @@
 #    By: fneri <fneri@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/24 16:39:12 by fneri             #+#    #+#              #
-#    Updated: 2024/02/28 18:17:27 by fneri            ###   ########.fr        #
+#    Updated: 2024/03/03 14:51:50 by fneri            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,13 +15,13 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -f
 
-SRCS = mainfile.c \
-	push_swap.c \
+SRCS = push_swap.c \
 	operation_push.c \
 	operation_reverse_rotate.c \
 	operation_rotate.c \
 	operation_swap.c \
-	list_function.c 
+	list_function.c \
+	parsing.c \
 				
 OBJS = $(SRCS:.c=.o)
 

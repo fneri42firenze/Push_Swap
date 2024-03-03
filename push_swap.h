@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 18:52:00 by fneri             #+#    #+#             */
-/*   Updated: 2024/02/06 13:02:54 by fneri            ###   ########.fr       */
+/*   Updated: 2024/03/03 15:05:24 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ void		ft_sa(t_stack **stack_a);
 void		ft_sb(t_stack **stack_b);
 void		ft_ss(t_stack **stack_a, t_stack **stack_b);
 bool		ft_parsing(char **argv);
+bool		ft_check_double(char **argv);
+bool 		ft_max_int(char **argv);
 
 #endif

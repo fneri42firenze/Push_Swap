@@ -5,37 +5,46 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 16:23:03 by fneri             #+#    #+#             */
-/*   Updated: 2024/01/27 20:57:46 by fneri            ###   ########.fr       */
+/*   Created: 2024/01/13 19:00:59 by fneri             #+#    #+#             */
+/*   Updated: 2024/03/03 15:07:41 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool	ft_parsing(char **argv)
+int	main(int argc, char **argv)
 {
-	int	i;
-	int	j;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
-	i = 1;
-	j = 0;
-	while (argv[i])
+	if (argc == 1 || (argc == 2 && !argv[1][0]))
+		return (1);
+	else if (argc == 2)
 	{
-		while (argv[i][j])
+		argv = ft_split(argv[1], ' ');
+		if (ft_parsing(argv) && ft_check_double(argv) && ft_max_int(argv))
+			stack_a = ft_create_stack_onestring(argv);
+		else
 		{
-			if (argv[i][j] >= '0' && argv[i][j] <= '9')
-				j++;
-			else if (argv[i][j] == '-' && argv[i][j + 1] >= '0'
-			&& argv[i][j + 1] <= '9')
-				j++;
-			else if (argv[i][j] == '+' && argv[i][j + 1] >= '0'
-			&& argv[i][j + 1] <= '9')
-				j++;
-			else
-				return (0);
+			write(1, "Error\n", 6);
+			return (0);
 		}
-		j = 0;
-		i++;
 	}
-	return (1);
+	else
+	{
+		if (ft_parsing(argv) && ft_check_double(argv) && ft_max_int(argv))
+			stack_a = ft_create_stack(argv);
+		else
+		{
+			write(1, "Error\n", 6);
+			return (0);
+		}
+	}
+	stack_b = NULL;
+
+	printf("stack_a\n");
+	ft_print_stack(stack_a);
+	printf("stack_b\n");
+	ft_print_stack(stack_b);
+	return (0);
 }
