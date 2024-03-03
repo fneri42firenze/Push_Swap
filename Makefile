@@ -6,7 +6,7 @@
 #    By: fneri <fneri@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/24 16:39:12 by fneri             #+#    #+#              #
-#    Updated: 2024/01/27 20:44:14 by fneri            ###   ########.fr        #
+#    Updated: 2024/02/28 18:17:27 by fneri            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,6 @@ $(NAME): $(OBJS) $(LIBFT) $(PRINTF)
 
 $(OBJS): $(SRCS)
 	$(CC) $(CFLAGS) -c $(SRCS)
-
 
 $(LIBFT):
 	$(MAKE) -C libft_extended
